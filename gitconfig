@@ -1,0 +1,20 @@
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    df = diff
+    lg = log -p
+
+[user]
+    name = Akshat R. Shrivastava
+    email = patternexon@yahoo.com
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+
+[github]
+    user = patternexon
