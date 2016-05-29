@@ -1,10 +1,9 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
-
 "" Vundle - vims ultimate package manager
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
+"
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
@@ -19,11 +18,16 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'bling/vim-airline'
 " NERD tree
 Bundle 'scrooloose/nerdtree'
+" Go Lang
+Bundle 'jnwhiteh/vim-golang'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " non-GitHub repos
 Bundle 'git://git.wincent.com/command-t.git'
+
+" language support
+Plugin 'elixir-lang/vim-elixir'
 
 filetype plugin indent on     " required!
 "
@@ -37,7 +41,7 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle commands are not allowed.
 
 "" Vundle ends
-
+"TODO HTML plugin
 """"""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""
 "Basic stuff for prettying up
@@ -119,15 +123,18 @@ colorscheme molokai
 
 
 "" Setting Font
-set guifont=Inconsolata\ 12
+"set guifont=Inconsolata\ 13
 
 let mapleader = ","
+
+
 """"""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""
 " Plugin specifc mapping
 """""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""
 " NERDTree
+let NERDTreeChDirMode=2
 " starts when no file is given
 autocmd vimenter * if !argc() | NERDTree | endif
 " Ctrl+n
